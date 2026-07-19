@@ -1,0 +1,13 @@
+<mat-card class="stat-card">
+
+  <div class="stat-icon">
+    <mat-icon>{{ icon }}</mat-icon>
+  </div>
+
+  <div class="stat-content">
+    <span>{{ title }}</span>
+    <strong>{{ value }}</strong>
+    <small *ngIf="hint">{{ hint }}</small>
+  </div>
+
+</mat-card>

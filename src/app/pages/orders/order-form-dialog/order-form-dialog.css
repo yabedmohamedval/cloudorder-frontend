@@ -1,0 +1,27 @@
+.dialog-content {
+  display: flex;
+  min-width: 500px;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 12px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  .dialog-content {
+    min-width: 0;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

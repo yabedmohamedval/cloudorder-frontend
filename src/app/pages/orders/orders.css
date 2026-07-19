@@ -1,11 +1,170 @@
-mat-card {
-  margin: 30px;
+.page-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.eyebrow {
+  color: #155eef;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.page-heading h1 {
+  margin: 6px 0;
+  color: #182230;
+  font-size: 32px;
+}
+
+.page-heading p {
+  margin: 0;
+  color: #7c8697;
+}
+
+.orders-card {
+  overflow: hidden;
+  padding: 22px;
+  border: 1px solid #edf0f5;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgb(16 24 40 / 6%);
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.search-field {
+  flex: 1;
+}
+
+.price-filter {
+  width: 220px;
+}
+
+.active-filters {
+  margin-bottom: 18px;
 }
 
 table {
   width: 100%;
 }
 
-button {
-  margin-bottom: 15px;
+th {
+  color: #667085;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+td {
+  color: #344054;
+}
+
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 12px;
+  color: #155eef;
+  background: #eef4ff;
+}
+
+.loading-container {
+  display: grid;
+  min-height: 350px;
+  place-items: center;
+}
+
+.mobile-orders {
+  display: none;
+}
+
+.mobile-order-card {
+  margin-bottom: 14px;
+  padding: 18px;
+  border: 1px solid #edf0f5;
+  border-radius: 17px;
+  box-shadow: none;
+}
+
+.mobile-order-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.mobile-order-header span {
+  color: #8a94a5;
+  font-size: 12px;
+}
+
+.mobile-order-header h3 {
+  margin: 5px 0 18px;
+}
+
+.mobile-order-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.mobile-order-details span,
+.mobile-order-details strong {
+  display: block;
+}
+
+.mobile-order-details span {
+  color: #98a2b3;
+  font-size: 11px;
+}
+
+.mobile-order-details strong {
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .filters {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .search-field,
+  .price-filter {
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .desktop-table {
+    display: none;
+  }
+
+  .mobile-orders {
+    display: block;
+  }
+
+  .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .orders-card {
+    padding: 14px;
+  }
+
+  .page-heading h1 {
+    font-size: 26px;
+  }
 }

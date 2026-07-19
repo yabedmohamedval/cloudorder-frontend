@@ -1,0 +1,57 @@
+<mat-toolbar class="topbar">
+
+  <button
+    *ngIf="showMenuButton"
+    mat-icon-button
+    aria-label="Open navigation"
+    (click)="menuClick.emit()">
+
+    <mat-icon>menu</mat-icon>
+
+  </button>
+
+  <div class="topbar-title">
+    <span>Welcome back</span>
+    <strong>CloudOrder Workspace</strong>
+  </div>
+
+  <span class="toolbar-spacer"></span>
+
+  <button
+    mat-icon-button
+    aria-label="Notifications">
+
+    <mat-icon>notifications_none</mat-icon>
+
+  </button>
+
+  <button
+    mat-button
+    [matMenuTriggerFor]="profileMenu"
+    class="profile-button">
+
+    <span class="avatar">MY</span>
+
+    <span class="profile-name">
+      Mohamed Yabed
+    </span>
+
+    <mat-icon>keyboard_arrow_down</mat-icon>
+
+  </button>
+
+  <mat-menu #profileMenu="matMenu">
+
+    <button mat-menu-item>
+      <mat-icon>person</mat-icon>
+      <span>Profile</span>
+    </button>
+
+    <button mat-menu-item>
+      <mat-icon>settings</mat-icon>
+      <span>Settings</span>
+    </button>
+
+  </mat-menu>
+
+</mat-toolbar>

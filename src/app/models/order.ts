@@ -11,3 +11,9 @@ export interface Order {
   createdAt: string;
 
 }
+
+export interface OrderRequest {
+  productName: string;
+  quantity: number;
+  price: number;
+}

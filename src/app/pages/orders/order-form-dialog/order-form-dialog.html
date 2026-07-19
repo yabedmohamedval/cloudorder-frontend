@@ -1,0 +1,78 @@
+<h2 mat-dialog-title>
+  {{ isEditMode ? 'Edit order' : 'Create new order' }}
+</h2>
+
+<form
+  [formGroup]="form"
+  (ngSubmit)="save()">
+
+  <mat-dialog-content class="dialog-content">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Product name</mat-label>
+
+      <input
+        matInput
+        formControlName="productName"
+        placeholder="Example: Laptop Dell">
+
+      <mat-error
+        *ngIf="form.controls.productName.hasError('required')">
+
+        Product name is required.
+
+      </mat-error>
+    </mat-form-field>
+
+    <div class="form-row">
+
+      <mat-form-field appearance="outline">
+        <mat-label>Quantity</mat-label>
+
+        <input
+          matInput
+          type="number"
+          min="1"
+          formControlName="quantity">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Unit price</mat-label>
+
+        <input
+          matInput
+          type="number"
+          min="0.01"
+          step="0.01"
+          formControlName="price">
+
+        <span matTextSuffix>€</span>
+      </mat-form-field>
+
+    </div>
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+
+    <button
+      mat-button
+      type="button"
+      (click)="cancel()">
+
+      Cancel
+
+    </button>
+
+    <button
+      mat-flat-button
+      color="primary"
+      type="submit">
+
+      {{ isEditMode ? 'Save changes' : 'Create order' }}
+
+    </button>
+
+  </mat-dialog-actions>
+
+</form>

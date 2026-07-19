@@ -1,0 +1,28 @@
+<mat-sidenav-container class="application-shell">
+
+  <mat-sidenav
+    #drawer
+    class="application-sidebar"
+    [mode]="isMobile ? 'over' : 'side'"
+    [opened]="!isMobile">
+
+    <app-sidebar
+      (navigation)="closeMenuOnMobile()">
+    </app-sidebar>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <app-topbar
+      [showMenuButton]="isMobile"
+      (menuClick)="toggleMenu()">
+    </app-topbar>
+
+    <main class="application-content">
+      <router-outlet></router-outlet>
+    </main>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

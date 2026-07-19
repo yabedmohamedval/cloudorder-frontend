@@ -1,0 +1,47 @@
+<div class="sidebar-header">
+
+  <div class="logo">
+    <mat-icon>inventory_2</mat-icon>
+  </div>
+
+  <div>
+    <strong>Ordiva</strong>
+    <span>Order management</span>
+  </div>
+
+</div>
+
+<mat-nav-list>
+
+  <a
+    mat-list-item
+    routerLink="/dashboard"
+    routerLinkActive="active-link"
+    (click)="navigate()">
+
+    <mat-icon matListItemIcon>dashboard</mat-icon>
+    <span matListItemTitle>Dashboard</span>
+
+  </a>
+
+  <a
+    mat-list-item
+    routerLink="/orders"
+    routerLinkActive="active-link"
+    (click)="navigate()">
+
+    <mat-icon matListItemIcon>shopping_cart</mat-icon>
+    <span matListItemTitle>Orders</span>
+
+  </a>
+
+</mat-nav-list>
+
+<div class="sidebar-footer">
+  <mat-icon>cloud_done</mat-icon>
+
+  <div>
+    <strong>Cloud connected</strong>
+    <span>Firebase · Cloud Run</span>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.application-shell {
+  height: 100vh;
+  background: #f5f7fb;
+}
+
+.application-sidebar {
+  width: 260px;
+  border-right: 1px solid #e5e9f2;
+  background: #ffffff;
+}
+
+.application-content {
+  min-height: calc(100vh - 64px);
+  padding: 28px;
+}
+
+@media (max-width: 900px) {
+  .application-content {
+    padding: 16px;
+  }
+}
